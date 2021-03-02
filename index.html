@@ -4,68 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/all.min.css">
     <title>Trang chủ | Học lập trình miễn phí</title>
 </head>
-<body>
+<body id="body" onscroll=scrollMenu(event)>
     <div class="app">
         <header class="header">
-            <div class="header__content m-w mg-at">
-                <div class="header__content__logo">
-                    <a class="logo-link" href="./index.html">
-                        <img src="assets/img/logo.png" width="165" height="50">
-                    </a>
-                </div>
-                <div class="header__content__nav">
-                    <ul class="header__content__nav-list">
-                        <li class="header__content__nav-item">
-                            <a class="text-header" href="./index.html">TRANG CHỦ</a>
-                        </li>
-                        <li class="header__content__nav-item">
-                            <a class="text-header" href="./course.html">KHOÁ HỌC</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="header__content__auth">
-                    <ul class="header__content__auth-list">
-                        <li class="header__content__auth-item">
-                            <a class="text-header" href="./login.html">Đăng nhập</a>
-                        </li>
-                        <li class="header__content__auth-item item__senpai">
-                            |
-                        </li>
-                        <li class="header__content__auth-item">
-                            <a class="text-header" href="./register.html">Đăng ký</a>
-                        </li>
-                    </ul>
+            <div id="navBar" class="header__navbar">
+                <div class="header__content m-w mg-at grid">
+                    <div class="header__content__logo">
+                        <a class="logo-link" href="./index.html">
+                            <img src="assets/img/logo.png" width="165" height="50">
+                        </a>
+                    </div>
+                    <div class="header__content__nav hMobile">
+                        <ul class="header__content__nav-list">
+                            <li class="header__content__nav-item">
+                                <a class="text-header" href="./index.html">TRANG CHỦ</a>
+                            </li>
+                            <li class="header__content__nav-item">
+                                <a class="text-header" href="./course.html">KHOÁ HỌC</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="header__content__auth hMobile">
+                        <ul class="header__content__auth-list">
+                            <li class="header__content__auth-item">
+                                <a class="text-header" href="./login.html">Đăng nhập</a>
+                            </li>
+                            <li class="header__content__auth-item item__senpai">
+                                |
+                            </li>
+                            <li class="header__content__auth-item">
+                                <a class="text-header" href="./register.html">Đăng ký</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!-- CLICK -->
+                    <div class="nav__menu">
+                        <i onclick=openMenu() class="fas fa-bars"></i>
+                    </div>
+                    
                 </div>
             </div>
             <div class="background">
                 
             </div>
         </header>
-        
+
+        <div class="section m-w mg-at">
+            <div class="section__main">
+                <div class="section__item col-4 grid">
+                    <img src="assets/img/section/feature-1.png">
+                    <h3>Trên 30.000 học viên</h3>
+                </div>
+                <div class="section__item col-4 grid">
+                    <img src="assets/img/section/feature-2.png">
+                    <h3>10+ khoá học dành cho bạn</h3>
+                </div>
+                <div class="section__item col-4 grid">
+                    <img src="assets/img/section/feature-3.png">
+                    <h3>Học bất cứ nơi nào, ở bất cứ đâu</h3>
+                </div>
+            </div>
+        </div>
+
+
         <div class="container">
             <div class="app__container m-w mg-at">
                 <div class="main__index">
-                    <ul class="course__menu">
-                        <li class="course__menu__item">
-                            <a href="#">Theo lộ trình</a>
-                        </li>
-                        <li class="course__menu__item">
-                            <a href="#">Mới nhất</a>
-                        </li>
-                    </ul>
+                    <!-- INDEX -->
+                    <div class="course__heading">
+                        <h2>
+                            Khoá học nổi bật
+                        </h2>
+                        <p>
+                            Những khoá học có lượng học viên đăng ký nhiều nhất và có phản hồi tích cực nhất
+                        </p>
+                    </div>
+                    <!-- END -->
                     <div class="course__list">     
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -82,19 +112,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -111,19 +141,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -140,19 +170,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -169,19 +199,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -198,19 +228,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -227,19 +257,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -256,19 +286,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -285,19 +315,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -314,19 +344,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -343,19 +373,19 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="course__item col-3 grid">
+                        <div class="course__item col-4 grid">
                             <div class="course__item__img">
-                                <a href="#">
+                                <a href="./detail.html">
                                     <img class="course__img" src="./assets/img/courses/java.png">
                                 </a>
                             </div>
                             <div class="course__item__content">
-                                <h3><a href="#">
+                                <h3><a href="./detail.html">
                                     Kiến thức cơ bản, cốt lõi dân IT cần học trước
                                 </a></h3>
                                 <p class="course__item__content-des">
@@ -372,7 +402,7 @@
                                         <i class="fas fa-users"></i>2000
                                     </li>
                                     <li class="course__item__content-btn">
-                                        <a href="#">Miễn phí</a>
+                                        <a href="./detail.html">Miễn phí</a>
                                     </li>
                                 </ul>
                             </div>
@@ -385,7 +415,7 @@
 
         <footer>
             <div class="footer m-w mg-at">
-                <div class="footer__col col-4 grid">
+                <div class="footer__col-1 col-3 grid">
                     <p class="footer__col-logo">
                         <a href="./index.html">
                         <img src="./assets/img/logo.png" alt=""></a>
@@ -399,7 +429,7 @@
                     </p>
                     <p class="footer__col-desc footer__col-copyright">Clone F8! Edit by hainguyen92.</p>
                 </div>
-                <div class="footer__col col-6 grid">
+                <div class="footer__col-2 col-2 grid">
                     <h3 class="footer__col__title">I-TECH</h3>
                     <ul class="footer__col__list">
                         <li class="footer__col__item">
@@ -413,7 +443,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__col col-6 grid">
+                <div class="footer__col-3 col-2 grid">
                     <h3 class="footer__col__title">SẢN PhẩM</h3>
                     <ul class="footer__col__list">
                         <li class="footer__col__item">
@@ -427,7 +457,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__col col-6 grid">
+                <div class="footer__col-4 col-2 grid">
                     <h3 class="footer__col__title">Hỗ trợ</h3>
                     <ul class="footer__col__list">
                         <li class="footer__col__item">
@@ -444,7 +474,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__col col-4 grid">
+                <div class="footer__col-5 col-3 grid">
                     <h3 class="footer__col__title">NHẬN THÔNG BÁO MỚI NHẤT</h3>
                     <ul class="footer__col__list">
                         <li class="footer__col__item">
@@ -462,6 +492,63 @@
                 </div>
             </div>
         </footer>
+        <div id="bgmShow" class="menu__more">
+            <div id="menuMobile" class="menu__mobile">
+                <header class="menu__mobile__header">
+                    <img src="assets/img/logo.png">
+                    <span onclick=closeMenu()>
+                        <i class="fas fa-times"></i>
+                    </span>
+                </header>
+                <ul class="menu__mobile__list">
+                    <li>
+                        <span><i class="fas fa-sign-in-alt"></i></span>
+                        <a href="#">Đăng nhập</a>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-user-plus"></i></span>
+                        <a href="#">Đăng ký</a>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-home"></i></span>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-book"></i></span>
+                        <a href="#">Khoá học</a></li>
+                </ul>
+            </div>     
+        </div>
     </div>
+    <script>
+        var bgmShow = document.getElementById('bgmShow');
+        var menuMobile = document.getElementById('menuMobile');
+        var body = document.getElementById('body');
+        var navBar = document.getElementById('navBar');
+        // open menu
+        let openMenu = () => {
+            bgmShow.style.display = 'block';
+            body.className = 'stop-scrolling';
+        }
+        
+        // close Menu
+        let closeMenu = () => {
+            bgmShow.style.display = 'none';
+            body.className = '';
+        }
+
+        // Scroll Menu -> fixed
+
+        let scrollMenu = (event) => {
+            var x = document.documentElement.scrollTop || document.body.scrollTop;
+            if(x > 150){
+                navBar.style.background = 'black'
+                navBar.style.marginTop = '-14px'
+            }else{
+                navBar.style.background = ''
+                navBar.style.marginTop = ''
+            }
+        }
+    </script>
 </body>
 </html>
