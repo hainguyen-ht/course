@@ -47,6 +47,11 @@
         border-radius: 0px;
         border: 10px oldlace solid;
     }
+    .section__item{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%
+    }
 }
 /* IPAD PRO */
 @media (min-width: 1024px) and (max-width: 1239px){
@@ -64,11 +69,6 @@
     }
     .header .m-w{
         left: 50%;
-    }
-       
-    .section__item {
-        padding-top: 60px;
-        padding-bottom: 60px;
     }
     .course__list .col-4{
         width: 50%;
